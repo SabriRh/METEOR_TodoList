@@ -1,0 +1,95 @@
+<head>
+  <title>myTodo_SRH</title>  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  {{> header}}
+
+  <div class="main container col s8">
+   
+   {{> todos}}
+
+  </div>
+
+
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+
+
+{{> footer}}
+
+
+</body>
+
+
+
+<template name="todos">
+    <ul>
+      {{#each todos}}
+
+        <li class="todoElement row">
+          <span class="todoToggleStatus">X</span>
+          {{> todo}}
+          <span class="todoOptions">
+            <button class="myBtn todoUpdate waves-effect btn waves-light yellow">Update</button>
+            <button class="myBtn todoDelate waves-effect btn waves-light red">Delete</button>
+          </span>
+        </li>
+
+        
+      {{/each}}
+    </ul>
+</template>
+
+
+<template name="todo">
+      <span class="todoText">{{text}}</span>
+</template>
+
+
+<template name="header">
+  <header class="header page-header">
+    <div class="container">
+            <div class="row">
+              <h2>My Awsome Todo App !</h2>
+            </div>
+  </div>
+  </header>
+</template>
+
+
+<template name="footer" class="footer">
+                  <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Todo Project SRH.</h5>
+                <p class="grey-text text-lighten-4">This is a sample project using meteorJS with a material Design look and feel.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Take a look</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Linkedin</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Made with <span class="love">Love</span> Keyboard !
+            </div>
+          </div>
+        </footer>
+</template>

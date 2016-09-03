@@ -1,0 +1,21 @@
+{
+  "name": "SRH_TodoList",
+  "description": "a todo list exemple",
+  "main": "index.js",
+  "authors": [
+    "SabriRh"
+  ],
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "meteor",
+    "todo"
+  ],
+  "homepage": "https://github.com/SabriRh/SRH_TodoList",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
