@@ -1,12 +1,17 @@
+// import main scss file
+@import "{poetic:materialize-scss}/sass/materialize.scss";
+// If you want to override materialize sass variables you can uncomment the following:
+@import "{poetic:materialize-scss}/sass/components/_color.scss";
+$primary-color: color("blue-grey", "lighten-2");
+@import "{ericmcgregor:bootstrap4scss}/bootstrap";
 @import "themeConfig.scss";
-
-.main{
-
-text-align : center;
-	.todosList{
-	display: block;
-	.todoToggleStatus{
-		
-	}
+@import "header.scss";
+@import "main.scss";
+@import "footer.scss";
+.container-fluid {
+    padding: 0;
 }
+
+.fixed-action-btn.horizontal ul li {
+    margin: 0;
 }
